@@ -39,11 +39,11 @@ export const App = () => {
 					<ul className={styles['steps-list']}>
 						{/* Выводите <li> с помощью массива steps и метода map(), подставляя в разметку нужные значения и классы */}
 						{steps.map((item, index) => (
-								<li key={item.id} className={styles['steps-item'] + ' ' + (index < activeIndex ? styles.done : ''
-									) + ' ' + (index === activeIndex ? styles.active : '')}>
-									<button onClick={() => setActiveIndex(index)} className={styles['steps-item-button']}>{index + 1}</button>
-									{item.title}
-								</li>
+							<li key={item.id} className={styles['steps-item'] + ' ' + (index < activeIndex ? styles.done : ''
+								) + ' ' + (index === activeIndex ? styles.active : '')}>
+								<button onClick={() => setActiveIndex(index)} className={styles['steps-item-button']}>{index + 1}</button>
+								{item.title}
+							</li>
                     	))}
 					</ul>
 					<div className={styles['buttons-container']}>
